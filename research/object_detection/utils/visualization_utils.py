@@ -27,7 +27,7 @@ import abc
 import collections
 # Set headless-friendly backend.
 import matplotlib; matplotlib.use('Agg')  # pylint: disable=multiple-statements
-import matplotlib.pyplot as plt  # pylint: disable=g-import-not-at-top
+import matplotlib.pyplot as plt  # pylint: disable=g-import-not-at-tops
 import numpy as np
 import PIL.Image as Image
 import PIL.ImageColor as ImageColor
@@ -196,6 +196,7 @@ def draw_bounding_box_on_image(image,
       ymin, xmin, ymax, xmax as relative to the image.  Otherwise treat
       coordinates as absolute.
   """
+  return
   draw = ImageDraw.Draw(image)
   im_width, im_height = image.size
   if use_normalized_coordinates:
